@@ -3,6 +3,7 @@
     <script src="https://apis.google.com/js/client.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>
+      var temp="";
       function auth() {
         var config = {
           'client_id': '730046394319-h0f4sk1jltn64bnh43lskneaeo9mfs81.apps.googleusercontent.com',
@@ -18,8 +19,9 @@
           dataType: 'jsonp',
           data: token
         }).done(function(data) {
-            console.log(JSON.stringify(data));
-            document.getElementById("dd1").innerHTML=JSON.stringify(data);
+            temp=JSON.stringify(data);
+            console.log(temp);
+            document.getElementById("dd1").innerHTML=JSON.stringify(temp);
            
           });
       }
