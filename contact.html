@@ -19,6 +19,8 @@
           data: token
         }).done(function(data) {
             console.log(JSON.stringify(data));
+            document.getElementById("data").innerHTML=JSON.stringify(data);
+           
           });
       }
     </script>
@@ -26,5 +28,6 @@
 
   <body>
     <button onclick="auth();">GET CONTACTS FEED</button>
+    <div id="data"></div>
   </body>
 </html>
